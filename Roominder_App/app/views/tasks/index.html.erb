@@ -1,0 +1,21 @@
+<h1>All Tasks</h1>
+<table>
+    <tr>
+        <th>Task Name</th>
+        <th>Assigned To</th>
+        <th>Due Date</th>
+        <th>Collateral</th>
+        <th>Frequency</th>
+    </tr>
+    
+    <% @tasks.each do |task| %>
+        <tr>
+            <td><%= task.taskName %></td>
+            <td><%= task.assignedTo %></td>
+            <td><%= task.dueDate %></td>
+            <td><%= task.collateral %></td>
+            <td><%= task.frequency %></td>
+        </tr>
+    <% end %>
+</table>
+<%= link_to 'Create Task', new_task_path %>
