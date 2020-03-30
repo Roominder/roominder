@@ -3,6 +3,18 @@ class TasksController < ApplicationController
     end
     
     def create 
-        render plain: params[:task].inspect
+        #creates a new task with specified parameters (requirements defined in task_params)
+        #capitalized Task refers to the class Task as defined in models
+        @task = Task.new(task_params)
+        #saves to database
+        @task.save
+        #redirects (temporarily) to show created task
+        redirect_to @task
     end
+    
+    #parameters required to create a new task
+    private
+        def task_params
+            params.require(:task).permit(:taskName, :assignedTo, :dueDate, :collateral, :frequency)
+        end
 end
