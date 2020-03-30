@@ -1,4 +1,10 @@
 class TasksController < ApplicationController
+    #frequent practice for the order of CRUD actions is
+    #index, show, new, edit, create, update, destroy
+    def show
+        @task = Task.find(params[:id])
+    end
+    
     def new
     end
     
