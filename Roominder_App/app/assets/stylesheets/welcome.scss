@@ -39,7 +39,7 @@ body, html {
 /* Position text in the middle */
 .middle {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -47,6 +47,29 @@ body, html {
 
 /* Style the <hr> element */
 hr {
-  margin: auto;
-  width: 40%;
+  margin: 4px;
+  top: 45%;
+  left: 50%;
+  width: 100%;
 }
+
+
+/* CSS for authentication buttons*/
+button{
+    background-color: lightyellow;
+    float: center;
+    display: inline-block;
+    color: black;
+    width: 42.5%;
+    padding: 20px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.bottomleft{
+  top: 96.5%;
+  left: 50%;
+  color: gold;
+  font-size: 10px;
+}
+
