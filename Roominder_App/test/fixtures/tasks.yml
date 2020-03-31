@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  taskName: MyString
+  assignedTo: MyString
+  dueDate: MyString
+  collateral: MyString
+  frequency: MyString
+
+two:
+  taskName: MyString
+  assignedTo: MyString
+  dueDate: MyString
+  collateral: MyString
+  frequency: MyString

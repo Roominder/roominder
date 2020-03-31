@@ -1,0 +1,22 @@
+<h1>Created Task (this is temporary, creation of task should return to cumulative task page)</h1>
+<p>
+    <strong>Task Name:</strong>
+    <%= @task.taskName %>
+</p>
+<p>
+    <strong>Assigned To:</strong>
+    <%= @task.assignedTo %>
+</p>
+<p>
+    <strong>Due Date:</strong>
+    <%= @task.dueDate %>
+</p>
+<p>
+    <strong>Collateral:</strong>
+    <%= @task.collateral %>
+</p>
+<p>
+    <strong>Frequency:</strong>
+    <%= @task.frequency %>
+</p>
+<%= link_to 'All Tasks', tasks_path %>
