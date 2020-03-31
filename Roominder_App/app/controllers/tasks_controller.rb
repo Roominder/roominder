@@ -25,6 +25,6 @@ class TasksController < ApplicationController
     #parameters required to create a new task
     private
         def task_params
-            params.require(:task).permit(:taskName, :assignedTo, :dueDate, :collateral, :frequency)
+            params.require(:task).permit(:taskName, :assignedTo, :dueDate, :collateral, :frequency, :user_id)
         end
 end
