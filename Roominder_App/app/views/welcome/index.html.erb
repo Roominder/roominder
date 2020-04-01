@@ -7,6 +7,20 @@
     <h1>Roominder</h1>
     <hr>
       <div class = "appbuttons">
+      <%= form_with url: rooms_path, method: :get, local: true do |form| %>
+          <p>
+              <%= form.label :username, "Username" %><br>
+              <%= form.text_field :username %>
+          </p>
+          <p>
+              <%= form.label :password, "Password" %><br>
+              <!-- TODO: on frontend, don't display passwords in plain text -->
+              <%= form.text_field :password %>
+          </p>
+          <p>
+              <%= form.submit %>
+          </p>
+      <% end %>
         <button id = "sign" type="button">Sign Up</button>
         <button id = "login" type="button">Login</button>
       </div>
