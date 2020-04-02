@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     
     def create
         @room = Room.find(params[:room_id])
-        @user = @room.users.create(user_params)
+        @user = @room.users.create(user_params)!
     end
 
     private
