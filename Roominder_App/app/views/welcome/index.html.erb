@@ -18,14 +18,16 @@
               <%= form.text_field :password %>
           </p>
           <p>
+          <!-- TODO: on frontend, style the form submit button -->
               <%= form.submit %>
           </p>
       <% end %>
-        <button id = "sign" type="button">Sign Up</button>
-        <button id = "login" type="button">Login</button>
+      <!-- TODO: on frontend, space apart the form submit button and sign up button -->
+      <%= button_to "Sign Up", sign_up_create_join_path, id: "sign", class: "button", method: :get%>
       </div>
   </div>
   <!--footer-->
+  <!-- TODO: on frontend, rename class to something more descriptive. "footer"? -->
   <div class="bottomleft">
     <p>&copy; Roominder 2020</p>
   </div>
