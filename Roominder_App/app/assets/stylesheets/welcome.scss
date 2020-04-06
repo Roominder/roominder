@@ -29,20 +29,14 @@ body, html {
   left: 16px;
 }
 
-/* Position text in the bottom-left corner */
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
 /* Position text in the middle */
-.middle {
+.middle h1{
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 15%;
+  left: 55%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: green;
 }
 
 /* Style the <hr> element */
@@ -53,23 +47,44 @@ hr {
   width: 100%;
 }
 
+.login{
+  position: absolute;
+  top: 35%;
+  left: 53.2%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: blue;
+  margin: 5px;
+}
 
-/* CSS for authentication buttons*/
-.button{
+.auth, .button{
     background-color: lightyellow;
     float: center;
     display: inline-block;
     color: black;
-    width: 42.5%;
+    width: 90%;
     padding: 20px;
     margin: 6px;
     cursor: pointer;
 }
 
-.bottomleft{
-  top: 96.5%;
-  left: 50%;
-  color: gold;
-  font-size: 10px;
+.auth{
+  position: absolute;
+  top: 70%;
+  right: 50%;
 }
 
+.button{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+}
+
+/* Position text in the bottom-left corner */
+.footer {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  color: black;
+  font-size: 15px;
+}
