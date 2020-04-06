@@ -7,11 +7,27 @@
     <h1>Roominder</h1>
     <hr>
       <div class = "appbuttons">
-        <button id = "sign" type="button">Sign Up</button>
-        <button id = "login" type="button">Login</button>
+      <%= form_with url: rooms_path, method: :get, local: true do |form| %>
+          <p>
+              <%= form.label :username, "Username" %><br>
+              <%= form.text_field :username %>
+          </p>
+          <p>
+              <%= form.label :password, "Password" %><br>
+              <!-- TODO: on frontend, don't display passwords in plain text -->
+              <%= form.text_field :password %>
+          </p>
+          <p>
+          <!-- TODO: on frontend, style the form submit button -->
+              <%= form.submit %>
+          </p>
+      <% end %>
+      <!-- TODO: on frontend, space apart the form submit button and sign up button -->
+      <%= button_to "Sign Up", sign_up_index_path, id: "sign", class: "button", method: :get%>
       </div>
   </div>
   <!--footer-->
+  <!-- TODO: on frontend, rename class to something more descriptive. "footer"? -->
   <div class="bottomleft">
     <p>&copy; Roominder 2020</p>
   </div>
