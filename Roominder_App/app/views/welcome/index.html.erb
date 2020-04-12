@@ -1,21 +1,14 @@
 <div class="bgimg">
-  <div class="topleft">
-    <p></p>
-  </div>
   <!--Title and buttons-->
   <div class="middle">
     <h1>Roominder</h1>
-    <div class = "appbuttons">
-      <div class = "login">  
         <% if current_user %>
           Logged in as <%= current_user.username %>.
-          <%= button_to "Log Out", logout_path %>
+          <%= button_to "Log Out", logout_path, class: 'button', method: :get %>
         <% else %>
-          <%= button_to "Sign Up", signup_path, class: 'button' %>
-          <%= button_to "Log In", login_path, class: 'button' %>
+          <%= button_to "Sign Up", sign_up_index_path, class: 'button', method: :get %>
+          <%= button_to "Log In", login_path, class: 'button', method: :get %>
         <% end %>
-      </div>
-    </div>
   </div>
   <!--footer-->
   <!-- TODO: on frontend, rename class to something more descriptive. "footer"? -->

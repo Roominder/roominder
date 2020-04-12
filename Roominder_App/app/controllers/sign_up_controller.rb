@@ -10,6 +10,7 @@ class SignUpController < ApplicationController
     @invite_code = generate_code(6)
     @room.code = @invite_code
     @room.save!
+    redirect_to signup_path(:room_id => @room.id)
     # TODO: redirect to user creation view
   end
 

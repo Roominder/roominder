@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :rooms do
-    resources :users do
+    resources :secure_users do
       resources :tasks
     end
   end

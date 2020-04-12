@@ -24,6 +24,7 @@ class SecureUsersController < ApplicationController
   # POST /secure_users
   # POST /secure_users.json
   def create
+    byebug
     @secure_user = SecureUser.new(secure_user_params)
 
     respond_to do |format|
@@ -69,6 +70,6 @@ class SecureUsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def secure_user_params
-      params.require(:secure_user).permit(:name, :username, :email, :password, :password_confirmation)
+      params.require(:secure_user).permit(:name, :username, :email, :password, :password_confirmation, :room_id)
     end
 end

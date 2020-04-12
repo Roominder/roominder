@@ -36,7 +36,11 @@
     <%= form.password_field :password_confirmation %>
   </div>
 
+  <div class="field">
+    <%= form.hidden_field :room_id, :value => params[:room_id] %>
+  </div>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Sign Up' %>
   </div>
 <% end %>

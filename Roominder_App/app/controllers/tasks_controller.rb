@@ -3,8 +3,8 @@ class TasksController < ApplicationController
     #index, show, new, edit, create, update, destroy
     def index
         @room = Room.find(params[:room_id])
-        @users = @room.users
-        @tasks = Task.where(user_id: @users)
+        @users = @room.secure_users
+        @tasks = Task.where(secure_user_id: @users)
     end
     
     def show
@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     def create 
         #creates a new task with specified parameters (requirements defined in task_params)
         #capitalized Task refers to the class Task as defined in models
-        @user = User.find(params[:user_id])
+        @user = User.find(params[:secure_user_id])
         @task = @user.tasks.create(task_params)
         #saves to database
         @task.save
