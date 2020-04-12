@@ -21,7 +21,7 @@ class TasksController < ApplicationController
         @task = @user.tasks.create(task_params)
         #saves to database
         @task.save
-        redirect_to room_user_tasks_url
+        redirect_to room_secure_user_tasks_url
     end
     
     #parameters required to create a new task

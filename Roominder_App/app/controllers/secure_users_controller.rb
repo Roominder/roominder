@@ -26,16 +26,7 @@ class SecureUsersController < ApplicationController
   def create
     byebug
     @secure_user = SecureUser.new(secure_user_params)
-
-    respond_to do |format|
-      if @secure_user.save
-        format.html { redirect_to @secure_user, notice: 'Secure user was successfully created.' }
-        format.json { render :show, status: :created, location: @secure_user }
-      else
-        format.html { render :new }
-        format.json { render json: @secure_user.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to room_secure_user_tasks_url
   end
 
   # PATCH/PUT /secure_users/1

@@ -15,6 +15,8 @@ class SignUpController < ApplicationController
   end
 
   private
+  # generates a random 6 character room code.
+  # NOTE: code is not guaranteed to be unique
     def generate_code(size)
       charset = Array('A'..'Z') + Array('a'..'z')
       Array.new(size) { charset.sample }.join
