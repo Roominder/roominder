@@ -6,8 +6,12 @@
         <%= form.text_field :taskName %>
     </p>
     <p>
-        <%= form.label :assingedTo, "Assigned To" %><br>
-        <%= form.text_field :assignedTo %>
+        <% roomUsers = [] %>
+        <% for user in current_user.room.secure_users do %>
+            <% roomUsers << [user.name, user.id] %>
+        <% end %>
+        <%= form.label :assignedTo, "Assigned To" %><br>
+        <%= form.select(:assignedTo, roomUsers) %>
     </p>
     <p>
         <%= form.label :dueDate, "Due Date" %><br>
