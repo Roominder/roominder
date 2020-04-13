@@ -26,8 +26,7 @@ class SecureUsersController < ApplicationController
   def create
     @secure_user = SecureUser.new(secure_user_params)
     @secure_user.save!
-    # TODO: create a session in sessions_controller#create
-    # We essentially don't create sessions when a user signs up, but we do when they log in. weird
+    session[:secure_user_id] = @secure_user.id
     redirect_to "/rooms/%s/secure_users/%s/tasks" % [@secure_user.room_id, @secure_user.id]
   end
 
