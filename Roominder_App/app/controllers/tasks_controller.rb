@@ -18,7 +18,7 @@ class TasksController < ApplicationController
     def create 
         #creates a new task with specified parameters (requirements defined in task_params)
         #capitalized Task refers to the class Task as defined in models
-        @user = User.find(params[:secure_user_id])
+        @user = SecureUser.find(params[:secure_user_id])
         @task = @user.tasks.create(task_params)
         #saves to database
         @task.save
