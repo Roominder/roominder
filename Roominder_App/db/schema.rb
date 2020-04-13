@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_04_11_231642) do
     t.index ["secure_user_id"], name: "index_tasks_on_secure_user_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
-
+# TODO: delete the user model, views, and controller in preference to secure_user
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"

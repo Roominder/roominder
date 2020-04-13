@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = SecureUser.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:secure_user_id] = user.id
-      redirect_to root_url, notice: "Logged in!"
+      redirect_to room_path(user.room_id), notice: "Logged in!"
     else
       flash.now[:alert] = "Email or password is invalid"
       render "new"

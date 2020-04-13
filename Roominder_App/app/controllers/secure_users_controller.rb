@@ -24,9 +24,11 @@ class SecureUsersController < ApplicationController
   # POST /secure_users
   # POST /secure_users.json
   def create
-    byebug
     @secure_user = SecureUser.new(secure_user_params)
-    redirect_to room_secure_user_tasks_url
+    @secure_user.save!
+    # TODO: create a session in sessions_controller#create
+    # We essentially don't create sessions when a user signs up, but we do when they log in. weird
+    redirect_to "/rooms/%s/secure_users/%s/tasks" % [@secure_user.room_id, @secure_user.id]
   end
 
   # PATCH/PUT /secure_users/1

@@ -2,6 +2,7 @@ class TasksController < ApplicationController
     #frequent practice for the order of CRUD actions is
     #index, show, new, edit, create, update, destroy
     def index
+        # finds and displays all tasks in user's room (user's and user's roommates' tasks)
         @room = Room.find(params[:room_id])
         @users = @room.secure_users
         @tasks = Task.where(secure_user_id: @users)
@@ -27,6 +28,6 @@ class TasksController < ApplicationController
     #parameters required to create a new task
     private
         def task_params
-            params.require(:task).permit(:taskName, :assignedTo, :dueDate, :collateral, :frequency, :user_id)
+            params.require(:task).permit(:taskName, :assignedTo, :dueDate, :collateral, :frequency, :secure_user_id)
         end
 end
