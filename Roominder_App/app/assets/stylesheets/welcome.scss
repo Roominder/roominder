@@ -1,11 +1,12 @@
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
   height: 100%;
+  width: 100%;
 }
 
 .bgimg {
   /* Background image */
-  background-image: url(roominderImage.jpg);
+  background-image: url(RoominderImage.jpg);
   /* Full-screen */
   height: 100%;
   /* Center the background image */
@@ -19,7 +20,7 @@ body, html {
   /* Add a font */
   font-family: "Courier New", Courier, monospace;
   /* Set the font-size to 25 pixels */
-  font-size: 25px;
+  font-size: 30px;
 }
 
 /* Position text in the top-left corner */
@@ -32,13 +33,15 @@ body, html {
 /* Position text in the middle */
 .middle h1{
   position: absolute;
-  top: 15%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: green;
+  top: 47%;
+  left: 43%;
+  color: #E8A87C;
+  text-shadow: 
+   0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }
-
 /* Style the <hr> element */
 hr {
   margin: 4px;
@@ -58,13 +61,14 @@ hr {
 }
 
 .button {
-  background-color: lightyellow;
-  float: center;
+  background-color: #41B3A3;
+  float: right;
   display: inline-block;
   color: black;
   padding: 20px;
   margin: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* Position text in the bottom-left corner */
