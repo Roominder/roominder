@@ -1,4 +1,4 @@
-<h1>All Tasks</h1>
+<h1><%= current_user.room.name %> - Tasks</h1>
 <!-- TODO: add invite roommates button -->
 <table>
     <tr>
@@ -12,7 +12,7 @@
     <% @tasks.each do |task| %>
         <tr>
             <td><%= task.taskName %></td>
-            <td><%= task.assignedTo %></td>
+            <td><%= SecureUser.find(task.assignedTo).name %></td>
             <td><%= task.dueDate %></td>
             <td><%= task.collateral %></td>
             <td><%= task.frequency %></td>
