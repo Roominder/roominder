@@ -1,3 +1,41 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bgImage{
+    /* Background image */
+  background-image: url(background.jpg);
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a magenta text color to all elements inside the .bgimg container */
+  color: magenta;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+.bgImage h1{
+    position: relative;
+    top: 40%;
+    left: 45%;
+}
+
+.field{
+    position: relative;
+   /* top: 45.5%; */
+    left: 45%;
+}
+
+
+.actions{
+    position: relative;
+    top: 50%;
+    left: 45%;
+    float: center;
+}
