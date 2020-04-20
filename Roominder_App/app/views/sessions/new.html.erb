@@ -1,7 +1,9 @@
-<div class = "login-header">
+<header>
     <h1>Roominder</h1>
     <%= image_tag('roomi.png') %>
-    <div class= "field">
+</header>
+<body>
+    <div class = "loginInfo">
         <h1>Login</h1>
             <%= form_tag sessions_path do |form| %>
              <!--tag for Email-->
@@ -11,7 +13,7 @@
             <%= label_tag :password %>
             <%= password_field_tag :password %></br>
             <!--Submit button-->
-            <%= submit_tag "Login" %>
+            <%= submit_tag "Login", :class => "logButton" %>
         </div>
         <!--
         <div class="actions">
@@ -19,7 +21,7 @@
         </div>
         -->
     <% end %>
-</div>
-<div class = "login-footer"> 
-&copy Roominder 2020
-</div>
+</body>
+<footer> 
+    &copy Roominder 2020
+</footer>
