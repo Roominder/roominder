@@ -1,41 +1,58 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.bgImage{
-    /* Background image */
-  background-image: url(background.jpg);
-  /* Full-screen */
-  height: 100%;
-  /* Center the background image */
-  background-position: center;
-  /* Scale and zoom in the image */
-  background-size: cover;
-  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-  position: relative;
-  /* Add a magenta text color to all elements inside the .bgimg container */
-  color: magenta;
-  /* Add a font */
-  font-family: "Courier New", Courier, monospace;
-  /* Set the font-size to 25 pixels */
-  font-size: 25px;
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
-.bgImage h1{
+h1 {
+    text-align: center;
+    color: #84ceeb;
+}
+
+
+.login-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 155px;
+    background-color: #5680e9;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
+}
+
+.field {
     position: relative;
-    top: 40%;
-    left: 45%;
+    top: 1px;
+    width: 100%;
+    height: 150px;
+    color: #ffffff;
+    background-color: #8860d0;
+    text-align: center;
 }
 
-.field{
-    position: relative;
-   /* top: 45.5%; */
-    left: 45%;
-}
-
-
+/*
 .actions{
-    position: relative;
-    top: 50%;
-    left: 45%;
-    float: center;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #8860d0;
+    align: center;
+}
+*/
+
+.login-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #5ab9ea;
+    color: #ffffff;
+    text-align: center;
 }
