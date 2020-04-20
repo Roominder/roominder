@@ -1,17 +1,25 @@
-<div class="bgImage">
-    <p id='alert'><%= alert %></p>
+<div class = "login-header">
+    <h1>Roominder</h1>
+    <%= image_tag('roomi.png') %>
+    <div class= "field">
         <h1>Login</h1>
             <%= form_tag sessions_path do |form| %>
-        <div class='field'>
              <!--tag for Email-->
             <%= label_tag :email %>
             <%= text_field_tag :email %>
             <!--tag for Password-->
             <%= label_tag :password %>
-            <%= password_field_tag :password %>
+            <%= password_field_tag :password %></br>
+            <!--Submit button-->
+            <%= submit_tag "Login" %>
         </div>
+        <!--
         <div class="actions">
             <%= submit_tag "Login" %>
+        </div>
+        -->
+        <div class = "login-footer"> 
+            &copy Roominder 2020
         </div>
     <% end %>
 </div>

@@ -1,3 +1,61 @@
 // Place all the styles related to the Join controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: #84ceeb;
+}
+
+
+.login-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 155px;
+    background-color: #5680e9;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
+}
+
+.field {
+    position: relative;
+    top: 1px;
+    width: 100%;
+    height: 150px;
+    color: #ffffff;
+    background-color: #8860d0;
+    text-align: center;
+}
+
+/*
+.actions{
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #8860d0;
+    align: center;
+}
+*/
+
+.login-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #5ab9ea;
+    color: #ffffff;
+    text-align: center;
+}
