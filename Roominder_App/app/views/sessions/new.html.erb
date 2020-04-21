@@ -5,21 +5,19 @@
 <body>
     <div class = "loginInfo">
         <h1>Login</h1>
+            <div class = "oneHalf">
+                <%= image_tag('AvImage.jpg') %>
+            </div>
             <%= form_tag sessions_path do |form| %>
              <!--tag for Email-->
-            <%= label_tag :email %>
-            <%= text_field_tag :email %>
+            <%= label_tag "Email", :Email, :class =>"emailLabel" %>
+            <%= text_field_tag "Email", :Email, :class =>"emailInput" %>
             <!--tag for Password-->
-            <%= label_tag :password %>
-            <%= password_field_tag :password %></br>
+            <%= label_tag "Password", :Password, :class =>"passwordLabel" %>
+            <%= password_field_tag "Password", :Password, :class =>"passwordInput" %></br>
             <!--Submit button-->
-            <%= submit_tag "Login", :class => "logButton" %>
-        </div>
-        <!--
-        <div class="actions">
-            <%= submit_tag "Login" %>
-        </div>
-        -->
+            <%= submit_tag "Login", :class =>"logButton" %>
+    </div>
     <% end %>
 </body>
 <footer> 
