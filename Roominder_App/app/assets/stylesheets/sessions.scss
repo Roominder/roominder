@@ -29,12 +29,6 @@ header {
 body {
         font: 13px/20px;
         color: #ffffff;
-        background-image: url('loginpic.jpg');
-        background-repeat: no-repeat;
-        background-size: 50% 100%;
-        background-color: #C1C8E4;
-        width: 50%;
-        height: 100%;
 }
 
 .loginInfo:before {
@@ -146,9 +140,6 @@ body {
         }
         
     }
-    
-    
-
 
 :-moz-placeholder {
   color: #c9c9c9 !important;
@@ -159,8 +150,6 @@ body {
   color: #ccc;
   font-size: 13px;
 }
-
-
 
 footer{
     position: absolute;

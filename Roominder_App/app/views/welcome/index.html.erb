@@ -2,12 +2,14 @@
   <!--Title and buttons-->
   <div class="middle">
     <h1>Roominder</h1>
+       <p>One way stop for Interactive Chores!</p>
         <% if current_user %>
           Logged in as <%= current_user.username %>.
-          <%= button_to "Log Out", logout_path, class: 'button', method: :get %>
+          <%= button_to "Log Out", logout_path, class: 'welcomeButtons', method: :get %>
         <% else %>
-          <%= button_to "Sign Up", sign_up_index_path, class: 'button', method: :get %>
-          <%= button_to "Log In", login_path, class: 'button', method: :get %>
+          <%= button_to "Sign Up", sign_up_index_path, class: 'welcomeButtons', method: :get %>
+          <%= button_to "Log In", login_path, class: 'welcomeButtons', method: :get %>
+          <button type="submit" id="roomiPic" class = "welcomeButtons">Roomie</button>
         <% end %>
   </div>
   <!--footer-->
@@ -16,4 +18,3 @@
     <p>&copy; Roominder 2020</p>
   </div>
 </div>
-<!--<footer>&copy; Roominder 2020</footer>-->
