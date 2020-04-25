@@ -83,7 +83,8 @@ hr {
   float: right;
   display: inline-block;
   background-color: #800080; /* Purple background color */
-  border-radius: 30px; /* Curve of border corners */
+  border-radius: 30px;
+  border-color: #800080;/* Curve of border corners */
   text-transform: uppercase; /* Make letters uppercase */
   color: #E8A87C; /* Text color */
   padding: 20px;
