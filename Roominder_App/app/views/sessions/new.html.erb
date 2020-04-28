@@ -1,0 +1,38 @@
+<header>
+    <h1>Roominder</h1>
+    <%= image_tag('roomi.png') %>
+</header>
+<body>
+    <div class="split left">
+        <%= image_tag('loginpic.jpg') %>
+    </div>
+    <div class="split right">
+         <h1>Login</h1>
+         <%= image_tag('backgroundImage.png') %>
+         <div class="loginForm">
+             <%= form_tag sessions_path do |form| %>
+             <!--tag for Email-->
+            <%= label_tag "Email", :Email, :class =>"emailLabel" %>
+            <%= text_field_tag "Email", :Email, :class =>"emailInput" %>
+            <!--tag for Password-->
+            <%= label_tag "Password", :Password, :class =>"passwordLabel" %>
+            <%= password_field_tag "Password", :Password, :class =>"passwordInput" %></br>
+            <!--tag for Remember Me checkbox-->
+            <p class="remember_me">
+                <label>
+                  <input type="checkbox" name="remember_me" id="remember_me">
+                  Remember me on this computer
+                </label>
+             </p>
+            <!--Submit button-->
+            <%= submit_tag "Login", :class =>"logButton" %>
+        </div>
+        <div class="login-help">
+            <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+        </div>
+    </div>
+    <% end %>
+</body>
+<footer> 
+    &copy Roominder 2020
+</footer>

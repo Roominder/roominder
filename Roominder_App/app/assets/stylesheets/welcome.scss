@@ -1,11 +1,12 @@
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
-  height: 100%
+  height: 100%;
+  width: 100%;
 }
 
 .bgimg {
   /* Background image */
-  background-image: url(roominderImage.jpg);
+  background-image: url(RoominderImage.jpg);
   /* Full-screen */
   height: 100%;
   /* Center the background image */
@@ -19,7 +20,7 @@ body, html {
   /* Add a font */
   font-family: "Courier New", Courier, monospace;
   /* Set the font-size to 25 pixels */
-  font-size: 25px;
+  font-size: 30px;
 }
 
 /* Position text in the top-left corner */
@@ -29,47 +30,72 @@ body, html {
   left: 16px;
 }
 
-/* Position text in the bottom-left corner */
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
 /* Position text in the middle */
-.middle {
+.middle h1{
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 25%;
+  left: 45%;
+  color: #E8A87C;
+  text-shadow: 
+   0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }
-
-/* Style the <hr> element */
+/* Style the <hr> element 
 hr {
   margin: 4px;
   top: 45%;
   left: 50%;
   width: 100%;
+}*/
+
+.middle p{
+  position: absolute;
+  top: 33%;
+  left: 48%;
+  color: #E8A87C;
+} 
+
+.login_ {
+  position: absolute;
+  top: 35%;
+  left: 53.2%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: blue;
+  margin: 5px;
 }
 
-
-/* CSS for authentication buttons*/
-.button{
-    background-color: lightyellow;
-    float: center;
-    display: inline-block;
-    color: black;
-    width: 42.5%;
-    padding: 20px;
-    margin: 6px;
-    cursor: pointer;
+#roomiPic{
+  background-image: url(roomi.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  background-color: #800080;
+  border-radius: 50%; /* Curve of border corners */
+  color: transparent; /* Hide the 'submit' text */
+  padding: 20px;
+  margin: 6px;
 }
 
-.bottomleft{
-  top: 96.5%;
+.welcomeButtons {
+  float: right;
+  display: inline-block;
+  background-color: #800080; /* Purple background color */
+  border-radius: 30px;
+  border-color: #800080;/* Curve of border corners */
+  text-transform: uppercase; /* Make letters uppercase */
+  color: #E8A87C; /* Text color */
+  padding: 20px;
+  margin: 6px;
+}
+
+/* Position text in the bottom-left corner */
+.footer {
+  position: absolute;
+  bottom: 0%;
   left: 50%;
-  color: gold;
-  font-size: 10px;
+  color: #E8A87C;
+  font-size: 15px;
 }
-

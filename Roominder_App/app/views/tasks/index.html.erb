@@ -1,22 +1,32 @@
-<h1>All Tasks</h1>
-<!-- TODO: add invite roommates button -->
-<table>
-    <tr>
-        <th>Task Name</th>
-        <th>Assigned To</th>
-        <th>Due Date</th>
-        <th>Collateral</th>
-        <th>Frequency</th>
-    </tr>
-    
-    <% @tasks.each do |task| %>
-        <tr>
-            <td><%= task.taskName %></td>
-            <td><%= task.assignedTo %></td>
-            <td><%= task.dueDate %></td>
-            <td><%= task.collateral %></td>
-            <td><%= task.frequency %></td>
-        </tr>
-    <% end %>
-</table>
-<%= link_to 'Create Task', new_room_user_task_path %>
+<div class = "task-header">
+    <h1>Roominder</h1>
+    <%= image_tag('roomi.png') %>
+    <h1><%= current_user.room.name %> - Tasks</h1>
+    <!-- TODO: add invite roommates button -->
+    <div class = "task-table">
+        <table>
+            <tr>
+                <th>Task Name</th>
+                <th>Assigned To</th>
+                <th>Due Date</th>
+                <th>Collateral</th>
+                <th>Frequency</th>
+            </tr>
+            
+            <% @tasks.each do |task| %>
+                <tr>
+                    <td><%= task.taskName %></td>
+                    <td><%= SecureUser.find(task.assignedTo).name %></td>
+                    <td><%= task.dueDate %></td>
+                    <td><%= task.collateral %></td>
+                    <td><%= task.frequency %></td>
+                </tr>
+            <% end %>
+        </table>
+    </div> 
+    <%= link_to 'Create Task', new_room_secure_user_task_path %>
+</div>
+
+<div class = "task-footer"> 
+    &copy Roominder 2020
+</div>

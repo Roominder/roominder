@@ -1,12 +1,24 @@
 <%# <h1>SignUp#create_join</h1>
 <p>Find me in app/views/sign_up/create_join.html.erb</p> %>
-<div id="create">
-    <h2>Create</h2>
-    <p>Create a room if one does not yet exist within Roominder.</p>
-    <%= button_to "Create", sign_up_create_room_path, class: "button", method: :get%>
-</div>
-<h1>Or</h1>
-<div id="join">
-    <h2>Join</h2>
-    <p>Join a room if one already exist within Roominder. You will need an invite code.</p>
+<div class="bgImage">
+<header>
+    <h1>Roominder</h1>
+    <%= image_tag('roomi.png') %>
+</header>
+<body>
+        <div id="create">
+            <h2>Create</h2>
+            <p>Create a room if one does not yet exist within Roominder.</p>
+            <%= button_to "Create a Room", sign_up_create_room_path, class: "button", method: :get%>
+            <h1>OR</h1>
+        </div>
+        <div id="join">
+            <h2>Join</h2>
+            <p>Join a room if one already exist within Roominder. You will need an invite code.</p>
+            <button type="submit" id="joinRoom" class = "button">Join a Room</button>
+        </div>
+</body>
+<footer> 
+    &copy Roominder 2020
+</footer>
 </div>
