@@ -1,8 +1,8 @@
 <div class = "task-header">
+    <h4>Room Invite Code: <%= current_user.room.code %></h4>
     <h1>Roominder</h1>
     <%= image_tag('roomi.png') %>
     <h1><%= current_user.room.name %> - Tasks</h1>
-    <!-- TODO: add invite roommates button -->
     <div class = "task-table">
         <table>
             <tr>
