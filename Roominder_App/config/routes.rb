@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :secure_users
   get 'sign_up/index'
   get 'sign_up/create_room'
-  post 'sign_up/new'
+  get 'sign_up/join_room'
+  post 'sign_up/new_room'
+  post 'sign_up/assign_room'
   get 'createtask/index'
   get 'taskview/index'
   get 'join/index'

@@ -1,9 +1,8 @@
-<%= form_with url: sign_up_new_path, local: true do |form| %>
+<%= form_with url: sign_up_new_room_path, local: true do |form| %>
     <p>
         <%= form.label :name, "What do you want to call the home?" %><br>
         <%= form.text_field :name %>
-    </p>
-    <!-- TODO: on frontend, button text should display the name of the action (login/signup) --> 
-        <%= form.submit %>
+    </p> 
+        <%= form.submit 'Create Room!'%>
     </p>
 <% end %>
