@@ -1,3 +1,119 @@
 // Place all the styles related to the SignUp controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 155px;
+    background-color: #5680e9;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        height: 60%;
+    }
+    
+    h1 {
+    text-align: center;
+    color: #84ceeb;
+    }
+}
+
+
+body {
+        /*
+        background: url('backgroundImageS.jpg');
+        background-size: 1500px 1300px;
+        */
+        
+        .bgImage{
+            /* Background image */
+            background-image: url(backgroundImageS.jpg);
+            /* Full-screen */
+            height: 100%;
+            /* Center the background image */
+            background-position: center;
+            /* Scale and zoom in the image */
+            background-size: cover;
+            /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+             position: relative;
+        }
+           
+        #create {
+            position: absolute;
+            top: 35%;
+            left: 13%;
+            
+            h2, p{
+                color:  #5ab9ea;
+                text-align: center;
+            }
+            
+            .button{
+                position: absolute;
+                top: 90%;
+                left: 30%;
+                display: inline-block;
+                background-color: #800080; /* Purple background color */
+                border-radius: 30px;
+                border-color: #800080;/* Curve of border corners */
+                text-transform: uppercase; /* Make letters uppercase */
+                color: #E8A87C; /* Text color */
+                padding: 20px;
+                margin: 6px;
+            }
+            
+            h1{
+                position: absolute;
+                top: 35%;
+                left: 130%;
+            }
+        }
+            
+            #join {
+            position: absolute;
+            top: 35%;
+            left: 60%;
+            
+            h2, p{
+                color: #5ab9ea;
+                text-align: center;
+            }
+            
+            .button{
+                position: absolute;
+                top: 90%;
+                left: 40%;
+                display: inline-block;
+                background-color: #800080; /* Purple background color */
+                border-radius: 30px;
+                border-color: #800080;/* Curve of border corners */
+                text-transform: uppercase; /* Make letters uppercase */
+                color: #E8A87C; /* Text color */
+                padding: 20px;
+                margin: 6px;
+            }
+            
+        }
+}
+     
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #5ab9ea;
+    color: #ffffff;
+    text-align: center;
+    align: center;
+}     
