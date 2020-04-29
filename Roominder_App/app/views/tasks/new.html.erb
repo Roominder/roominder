@@ -22,8 +22,9 @@
         <%= form.text_field :collateral %>
     </p>
     <p>
+        <%= frequencies = ["Daily", "Weekly", "Bi-Weekly", "Monthly"]%>
         <%= form.label :frequency, "Frequency" %><br>
-        <%= form.text_field :frequency %>
+        <%= form.select :frequency, frequencies %>
     </p>
     <p>
         <%= form.submit %>
