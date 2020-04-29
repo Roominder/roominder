@@ -1,4 +1,7 @@
 <div id="task-header">
+    <% if current_user %>
+          <%= button_to "Log Out", logout_path, class: 'welcomeButtons', method: :get %>
+    <% end %>
     <h4>Room Invite Code: <%= current_user.room.code %></h4>
     <h1 id="task-appname">Roominder</h1>
     <div id="logo-img">

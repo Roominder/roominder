@@ -18,6 +18,14 @@ html,body {
         right: 0;
         margin: 1em;
     }
+
+    .welcomeButtons {
+        position: absolute;
+        top: 40px;
+        right: 150px;
+        background-color: #8860d0;
+        border-color: #8860d0;
+    }
 }
 
 #task-appname {
@@ -55,6 +63,7 @@ html,body {
     td {
         background-color: #c1c8e4;
         color: #8860d0;
+        text-align: center;
     }
 }
 
@@ -63,9 +72,9 @@ html,body {
     right: 0;
     top: 40px;
     display: inline-block;
-	background-color: #84ceeb; /* Purple background color */
     border-radius: 30px;
-	border-color: #84ceeb;/* Curve of border corners */
+	background-color: #8860d0;
+    border-color: #8860d0;;/* Curve of border corners */
 	color: #E8A87C; /* Text color */
 	padding: 20px;
     margin: 6px;
