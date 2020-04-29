@@ -5,14 +5,50 @@ html,body {
     padding: 0px;
 }
 
-h1 {
+#task-header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #5680e9;
+
+    h4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1em;
+    }
+}
+
+#task-appname {
     position: absolute;
-    top: 10%;
-    text-align: center;
+    top: 0;
+    left: 46%;
+    margin-left: auto;
+    margin-right: auto;
     color: #84ceeb;
 }
 
-table {
+#task-roomname {
+    position: absolute;
+    top: 65%;
+    left: 43%;
+    color: #84ceeb;
+}
+
+
+#logo-img {
+    img {
+        position:relative;
+        top: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+    }
+}
+
+#task-table {
     background-color: #c1c8e4;
     border-collapse: collapse;
     width: 100%;
@@ -30,31 +66,10 @@ table {
     }
 }
 
-.task-header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 300px;
-    background-color: #5680e9;
-
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 150px;
-    }
-
-    h4 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 1em;
-    }
-}
-
 #createTask {
     position: absolute;
-    top: 10%;
+    right: 0;
+    top: 40px;
     display: inline-block;
 	background-color: #84ceeb; /* Purple background color */
     border-radius: 30px;
@@ -64,7 +79,7 @@ table {
     margin: 6px;
 }
 
-.task-table {
+#taskview {
     position: absolute;
     background-color: #c1c8e4;
     top: 250px;
