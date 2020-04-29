@@ -11,6 +11,7 @@
 <div id="taskview">
     <table id="task-table">
         <tr>
+            <th>Complete?</th>
             <th>Task Name</th>
             <th>Assigned To</th>
             <th>Due Date</th>
@@ -20,6 +21,9 @@
         
         <% @tasks.each do |task| %>
             <tr>
+                <td><%= link_to 'Done', [task.secure_user.room, task.secure_user, task],
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' }%></td>
                 <td><%= task.taskName %></td>
                 <td><%= SecureUser.find(task.assignedTo).name %></td>
                 <td><%= task.dueDate %></td>
