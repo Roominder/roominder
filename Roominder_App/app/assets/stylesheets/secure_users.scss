@@ -11,10 +11,13 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 155px;
+    height: 100px;
     background-color: #5680e9;
 
     img {
+    	 position: absolute;
+    	 top: 5%;
+    	 left: 45%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -22,18 +25,69 @@ header {
         height: 60%;
     }
     
-    h1 {
+    #roomiTag{
+    	position: absolute;
+    	top: 60%;
+    	left: 45%;
         text-align: center;
         color: #84ceeb;
     }
 }
+body{
+	h1 {
+		position: absolute;
+		top: 20%;
+		left: 42%;
+		color: #5680e9;
+	}
+	
+	#newUser{
+		position: absolute;
+		top: 20%;
+		left: 45%;
+		color: #5680e9;
+	}
+	
+	#userTable{
+		position: absolute;
+		top: 23%;
+		left: 45%;
+		color: #5680e9;
+	}
+}
+.backLink {
+	position: absolute;
+	top: 20%;
+	left: 1%;
+	  display: inline-block;
+	  background-color: #84ceeb; /* Blue background color */
+	  border-radius: 30px;
+	  border-color: #84ceeb;/* Curve of Blue corners */
+	  color: #E8A87C; /* Text color */
+	  padding: 20px;
+	  margin: 6px;
+}
+
+.backLink1 {
+	position: absolute;
+	top: 20%;
+	right: 1%;
+	  display: inline-block;
+	  background-color: #84ceeb; /* Purple background color */
+	  border-radius: 30px;
+	  border-color: #84ceeb;/* Curve of border corners */
+	  color: #E8A87C; /* Text color */
+	  padding: 20px;
+	  margin: 6px;
+}
+
 
 .field {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 40%;
     width: 20%;
-    height: 80%;
+    height: 64%;
 	padding: 10px 20px;
 	background: #f4f7f8;
 	margin: 10px auto;
@@ -65,7 +119,7 @@ header {
 
 .field .userLabel {
     display: block;
-	margin-bottom: 8px;
+	margin-bottom: 5px;
 	text-align: center;
 }
 
@@ -91,21 +145,40 @@ header {
 
 .field .infoSubmit {
     position: absolute;
-    top: 77%;
+    top: 90%;
     left: 5%;
 	display: block;
-	padding: 19px 39px 18px 39px;
+	padding: 10px 39px 10px 39px;
 	color: #FFF;
 	margin: 0 auto;
-	background: #5ab9ea;
+	background: #84ceeb;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
 	width: 90%;
-	border: 1px solid #5ab9ea;
+	border: 1px solid #84ceeb;
 	border-width: 1px 1px 3px;
 	margin-bottom: 5px;
 }
+
+.userData {
+	position: absolute;
+	top: 30%;
+	left: 1%;
+}
+
+#columnHead {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#notice {
+	position: absolute;
+	top: 25%;
+	left: 45%;
+	color: white;
+}
+
 
 footer{
     position: absolute;
