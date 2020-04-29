@@ -10,28 +10,41 @@
          <h1>Login</h1>
          <%= image_tag('backgroundImage.png') %>
          <div class="loginForm">
-             <%= form_tag sessions_path do |form| %>
-             <!--tag for Email-->
-            <%= label_tag "Email", :Email, :class =>"emailLabel" %>
-            <%= text_field_tag "Email", :Email, :class =>"emailInput" %>
-            <!--tag for Password-->
-            <%= label_tag "Password", :Password, :class =>"passwordLabel" %>
-            <%= password_field_tag "Password", :Password, :class =>"passwordInput" %></br>
-            <!--tag for Remember Me checkbox-->
-            <p class="remember_me">
-                <label>
-                  <input type="checkbox" name="remember_me" id="remember_me">
-                  Remember me on this computer
-                </label>
-             </p>
-            <!--Submit button-->
-            <%= submit_tag "Login", :class =>"logButton" %>
-        </div>
-        <div class="login-help">
-            <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+            <%= form_tag sessions_path do |form| %>
+            <div class="field">
+                <!--tag for Email-->
+                <%= label_tag "Email", :email, :class =>"emailLabel" %>
+                <%= text_field_tag :email, "Email", :class =>"emailInput" %>
+                <!--tag for Password-->
+                <%= label_tag "Password", :password, :class =>"passwordLabel" %>
+                <%= password_field_tag :password, "Password", :class =>"passwordInput" %></br>
+            <div class="actions">
+                <%= submit_tag "Login", :class =>"logButton" %>
+            </div>
         </div>
     </div>
     <% end %>
+
+    <!-- 
+        <div class="bgImage">
+            <p id='alert'><%= alert %></p>
+            <h1>Login</h1>
+            <%= form_tag sessions_path do |form| %>
+            <div class='field'>
+                <%= label_tag :email %>
+                <%= text_field_tag :email %>
+                <%= label_tag :password %>
+                <%= password_field_tag :password %>
+            </div>
+            <div class="actions">
+                <%= submit_tag "Login" %>
+            </div>
+            <% end %>
+        </div>
+    -->
+
+
+    <!--> 
 </body>
 <footer> 
     &copy Roominder 2020

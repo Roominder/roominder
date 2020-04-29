@@ -3,6 +3,7 @@
   <div class="middle">
     <h1>Roominder</h1>
        <p>One way stop for Interactive Chores!</p>
+        <%= session = nil%>
         <% if current_user %>
           Logged in as <%= current_user.username %>.
           <%= button_to "Log Out", logout_path, class: 'welcomeButtons', method: :get %>

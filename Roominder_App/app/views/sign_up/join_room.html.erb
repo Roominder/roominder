@@ -1,0 +1,8 @@
+<%= form_with url: sign_up_assign_room_path, local: true do |form| %>
+    <p>
+        <%= form.label :code, "Invite Code:" %><br>
+        <%= form.text_field :code %>
+    </p>
+        <%= form.submit "Join Room!"%>
+    </p>
+<% end %>
