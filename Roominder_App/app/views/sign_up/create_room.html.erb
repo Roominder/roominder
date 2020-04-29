@@ -1,8 +1,19 @@
-<%= form_with url: sign_up_new_room_path, local: true do |form| %>
-    <p>
-        <%= form.label :name, "What do you want to call the home?" %><br>
-        <%= form.text_field :name %>
-    </p> 
-        <%= form.submit 'Create Room!'%>
-    </p>
-<% end %>
+<div class="bgImage">
+    <header>
+        <h1>Roominder</h1>
+        <%= image_tag('roomi.png') %>
+    </header>
+    <body>
+        <%= form_with url: sign_up_new_room_path, local: true do |form| %>
+            <p>
+                <%= form.label :name, "What do you want to call the home?", :class =>"nameLabel" %><br>
+                <%= form.text_field :name, :class =>"nameInput" %>
+            </p> 
+                <%= form.submit 'Create!', :class =>"nameSubmit" %>
+            </p>
+        <% end %>
+    </body>
+    <footer> 
+        &copy Roominder 2020
+    </footer>
+</div>

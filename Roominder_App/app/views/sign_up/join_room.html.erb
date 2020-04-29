@@ -1,8 +1,19 @@
-<%= form_with url: sign_up_assign_room_path, local: true do |form| %>
-    <p>
-        <%= form.label :code, "Invite Code:" %><br>
-        <%= form.text_field :code %>
-    </p>
-        <%= form.submit "Join Room!"%>
-    </p>
-<% end %>
+<div class="bgImage">
+    <header>
+        <h1>Roominder</h1>
+        <%= image_tag('roomi.png') %>
+    </header>
+    <body>
+        <%= form_with url: sign_up_assign_room_path, local: true do |form| %>
+            <p>
+                <%= form.label :code, "Invite Code:", :class =>"nameLabel1" %><br>
+                <%= form.text_field :code, :class =>"nameInput" %>
+            </p>
+                <%= form.submit "Join!", :class =>"nameSubmit"%>
+            </p>
+        <% end %>
+    </body>
+    <footer> 
+        &copy Roominder 2020
+    </footer>
+</div>
