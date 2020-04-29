@@ -4,7 +4,8 @@
     <div id="logo-img">
         <%= image_tag('roomi.png')%>
     </div>
-    <h1 id="task-roomname"><%= current_user.room.name %> - Tasks</h1>
+    <!-- Create task button -->
+    <%= link_to 'Create Task', new_room_secure_user_task_path, :id => 'createTask' %>
 </div>
 
 <div id="taskview">
@@ -28,8 +29,6 @@
         <% end %>
     </table>
 </div> 
-<%= link_to 'Create Task', new_room_secure_user_task_path, :id => 'createTask' %>
-
 <div class = "task-footer"> 
     &copy Roominder 2020
 </div>

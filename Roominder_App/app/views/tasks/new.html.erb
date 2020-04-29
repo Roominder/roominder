@@ -1,33 +1,54 @@
-<h1>Create New Task</h1>
-<!-- Basic form for creating tasks, url: sends POST and returns to tasks/index-->
-<%= form_with scope: :task, url: room_secure_user_tasks_path, local: true do |form| %>
-    <p>
-        <%= form.label :taskName, "Task Name" %><br>
-        <%= form.text_field :taskName %>
-    </p>
-    <p>
-        <% roomUsers = [] %>
-        <% for user in current_user.room.secure_users do %>
-            <% roomUsers << [user.name, user.id] %>
+<div id="task-header">
+    <h4>Room Invite Code: <%= current_user.room.code %></h4>
+    <h1 id="task-appname">Roominder</h1>
+    <div id="logo-img">
+        <%= image_tag('roomi.png')%>
+    </div>
+    <!-- Back Button -->
+    <%= link_to 'Back', room_secure_user_tasks_path, :id => 'createTask' %>
+</div>
+
+<div id="createview">
+    <!-- Will match table header on task view -->
+    <table id="task-table">
+        <tr>
+            <th>Create Task</th>
+        </tr>
+    <table>
+    <div id="create-task-form">
+        <%= form_with scope: :task, url: room_secure_user_tasks_path, local: true do |form| %>
+            <p>
+                <%= form.label :taskName, "Task Name" %><br>
+                <%= form.text_field :taskName %>
+            </p>
+            <p>
+                <% roomUsers = [] %>
+                <% for user in current_user.room.secure_users do %>
+                    <% roomUsers << [user.name, user.id] %>
+                <% end %>
+                <%= form.label :assignedTo, "Assigned To" %><br>
+                <%= form.select(:assignedTo, roomUsers) %>
+            </p>
+            <p>
+                <%= form.label :dueDate, "Due Date" %><br>
+                <%= form.text_field :dueDate %>
+            </p> 
+            <p>
+                <%= form.label :collateral, "Collateral" %><br>
+                <%= form.text_field :collateral %>
+            </p>
+            <p>
+                <% frequencies = ["Daily", "Weekly", "Bi-Weekly", "Monthly"]%>
+                <%= form.label :frequency, "Frequency" %><br>
+                <%= form.select :frequency, frequencies %>
+            </p>
+            <p>
+                <%= form.submit %>
+            </p>
         <% end %>
-        <%= form.label :assignedTo, "Assigned To" %><br>
-        <%= form.select(:assignedTo, roomUsers) %>
-    </p>
-    <p>
-        <%= form.label :dueDate, "Due Date" %><br>
-        <%= form.text_field :dueDate %>
-    </p> 
-    <p>
-        <%= form.label :collateral, "Collateral" %><br>
-        <%= form.text_field :collateral %>
-    </p>
-    <p>
-        <%= frequencies = ["Daily", "Weekly", "Bi-Weekly", "Monthly"]%>
-        <%= form.label :frequency, "Frequency" %><br>
-        <%= form.select :frequency, frequencies %>
-    </p>
-    <p>
-        <%= form.submit %>
-    </p>
-<% end %>
-<%= link_to 'Back', room_secure_user_tasks_path %>
+    </div>
+</div> 
+
+<div class = "task-footer"> 
+    &copy Roominder 2020
+</div>

@@ -29,14 +29,6 @@ html,body {
     color: #84ceeb;
 }
 
-#task-roomname {
-    position: absolute;
-    top: 65%;
-    left: 43%;
-    color: #84ceeb;
-}
-
-
 #logo-img {
     img {
         position:relative;
@@ -86,6 +78,14 @@ html,body {
     width: 100%;
 }
 
+#createview {
+    position: absolute;
+    background-color: #c1c8e4;
+    top: 250px;
+    height: 100%;
+    width: 100%;
+}
+
 .task-footer {
     position: absolute;
     width: 100%;
@@ -94,4 +94,10 @@ html,body {
     background-color: #5ab9ea;
     text-align: center;
     color: #ffffff;
+}
+
+#create-task-form {
+    text-align: center;
+    width: 100%;
+    color: #8860d0;
 }
