@@ -11,7 +11,7 @@ Scenario: As a user I want to be able to sign out
     When I click on the "Create a Room" button
     Then I should see the "call the home" page
     When I enter "name" as "test" 
-    When I click on the "Create Room!" button
+    When I click on the "Create!" button
     Then I should see the "New User" page
     When I enter "secure_user_name" as "test"
     When I enter "secure_user_username" as "test"

@@ -11,7 +11,7 @@ Scenario: As a user I want to be able to create a new room
     When I click on the "Create a Room" button
     Then I should see the "call the home" page
     When I enter "name" as "test" 
-    When I click on the "Create Room!" button
+    When I click on the "Create!" button
     Then I should see the "New User" page
     When I enter "secure_user_name" as "test"
     When I enter "secure_user_username" as "test"
@@ -19,6 +19,6 @@ Scenario: As a user I want to be able to create a new room
     When I enter "secure_user_password" as "test123"
     When I enter "secure_user_password_confirmation" as "test123"
     When I click on the "Sign Up" button
-    Then I should see the "Tasks" page
+    Then I should see the "Room Invite" page
 
 
