@@ -27,10 +27,10 @@ Scenario: As a user I want to be able to add a task to my room
     #When I click on the "Login" button
     #Then I should see the "Tasks" page
     When I click on the "Create Task" link
-    When I enter "Task Name" as "trash" 
-    When I enter "Due Date" as "05/10/2020"
-    When I enter "Collateral" as "5"
-    When I enter "Frequency" as "weekly"
+    When I enter "task_taskName" as "trash" 
+    When I enter "task_dueDate" as "05/10/2020"
+    When I enter "task_collateral" as "5"
+    When I enter "task_frequency" as "weekly"
     When I click on the "Save Task" button
     Then I should see the "Tasks" page
     And I should see the "trash" page
