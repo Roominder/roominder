@@ -7,11 +7,10 @@
         <%= image_tag('loginpic.jpg') %>
     </div>
     <div class="split right">
-         <h1>Login</h1>
+         <h1 id="loginHead">Login</h1>
          <%= image_tag('backgroundImage.png') %>
          <div class="loginForm">
             <%= form_tag sessions_path do |form| %>
-            <div class="field">
                 <!--tag for Email-->
                 <%= label_tag "Email", :email, :class =>"emailLabel" %>
                 <%= text_field_tag :email, "Email", :class =>"emailInput" %>
@@ -21,30 +20,8 @@
             <div class="actions">
                 <%= submit_tag "Login", :class =>"logButton" %>
             </div>
-        </div>
     </div>
     <% end %>
-
-    <!-- 
-        <div class="bgImage">
-            <p id='alert'><%= alert %></p>
-            <h1>Login</h1>
-            <%= form_tag sessions_path do |form| %>
-            <div class='field'>
-                <%= label_tag :email %>
-                <%= text_field_tag :email %>
-                <%= label_tag :password %>
-                <%= password_field_tag :password %>
-            </div>
-            <div class="actions">
-                <%= submit_tag "Login" %>
-            </div>
-            <% end %>
-        </div>
-    -->
-
-
-    <!--> 
 </body>
 <footer> 
     &copy Roominder 2020

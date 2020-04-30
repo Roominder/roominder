@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @secure_user.name %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @secure_user.username %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @secure_user.email %>
-</p>
-
-<%= link_to 'Edit', edit_secure_user_path(@secure_user) %> |
-<%= link_to 'Back', secure_users_path %>
+<!--
+<div class="bgImage">
+    <header>
+        <h1 id="roomiTag">Roominder</h1>
+        <%= image_tag('roomi.png') %>
+    </header>
+    <body>
+    -->
+      <p id="notice"><%= notice %></p>
+        <%= link_to 'Back', secure_users_path, :class => 'backLink' %>
+      <p id="">
+        <strong>Name:</strong>
+        <%= @secure_user.name %>
+      </p>
+      <p>
+        <strong>Username:</strong>
+        <%= @secure_user.username %>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= @secure_user.email %>
+      </p>
+      <%= link_to 'Edit', edit_secure_user_path(@secure_user), :class => 'backLink1' %> |
+      <!--
+    </body>
+    <footer> 
+        &copy Roominder 2020
+    </footer>
+</div>
+-->

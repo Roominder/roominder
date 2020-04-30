@@ -1,32 +1,41 @@
-<div class = "task-header">
+<div id="task-header">
+    <% if current_user %>
+          <%= button_to "Log Out", logout_path, class: 'welcomeButtons', method: :get %>
+    <% end %>
     <h4>Room Invite Code: <%= current_user.room.code %></h4>
-    <h1>Roominder</h1>
-    <%= image_tag('roomi.png') %>
-    <h1><%= current_user.room.name %> - Tasks</h1>
-    <div class = "task-table">
-        <table>
-            <tr>
-                <th>Task Name</th>
-                <th>Assigned To</th>
-                <th>Due Date</th>
-                <th>Collateral</th>
-                <th>Frequency</th>
-            </tr>
-            
-            <% @tasks.each do |task| %>
-                <tr>
-                    <td><%= task.taskName %></td>
-                    <td><%= SecureUser.find(task.assignedTo).name %></td>
-                    <td><%= task.dueDate %></td>
-                    <td><%= task.collateral %></td>
-                    <td><%= task.frequency %></td>
-                </tr>
-            <% end %>
-        </table>
-    </div> 
-    <%= link_to 'Create Task', new_room_secure_user_task_path %>
+    <h1 id="task-appname">Roominder</h1>
+    <div id="logo-img">
+        <%= image_tag('roomi.png')%>
+    </div>
+    <!-- Create task button -->
+    <%= link_to 'Create Task', new_room_secure_user_task_path, :id => 'createTask' %>
 </div>
 
+<div id="taskview">
+    <table id="task-table">
+        <tr>
+            <th>Complete?</th>
+            <th>Task Name</th>
+            <th>Assigned To</th>
+            <th>Due Date</th>
+            <th>Collateral</th>
+            <th>Frequency</th>
+        </tr>
+        
+        <% @tasks.each do |task| %>
+            <tr>
+                <td><%= link_to 'Done', [task.secure_user.room, task.secure_user, task],
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' }%></td>
+                <td><%= task.taskName %></td>
+                <td><%= SecureUser.find(task.assignedTo).name %></td>
+                <td><%= task.dueDate %></td>
+                <td><%= task.collateral %></td>
+                <td><%= task.frequency %></td>
+            </tr>
+        <% end %>
+    </table>
+</div> 
 <div class = "task-footer"> 
     &copy Roominder 2020
 </div>

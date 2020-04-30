@@ -13,10 +13,11 @@
     </div>
   <% end %>
 
+<!--
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
-  </div>
+    </div>
 
   <div class="field">
     <%= form.label :username %>
@@ -45,4 +46,23 @@
   <div class="actions">
     <%= form.submit 'Sign Up' %>
   </div>
-<% end %>
+
+-->
+
+ <div class="field">
+   <legend><span class="number">1</span>Personal Info</legend>
+   <%= form.label :name, :class =>"userLabel"%>
+   <%= form.text_field :name,:class =>"userInput"  %>
+   <%= form.label :username, :class =>"userLabel" %>
+   <%= form.text_field :username, :class =>"userInput" %>
+   <%= form.label :email, :class =>"userLabel" %>
+   <%= form.text_field :email, :class =>"userInput" %>
+   <%= form.label :password, :class =>"userLabel" %>
+   <%= form.password_field :password, :class =>"userInput" %>
+   <%= form.label :password_confirmation, :class =>"userLabel" %>
+   <%= form.password_field :password_confirmation, :class =>"userInput" %>
+   <%= form.hidden_field :room_id, :value => params[:room_id] %>
+   <%= form.submit 'Sign Up', :class =>"infoSubmit" %>
+   <% end %>
+  </div> 
+

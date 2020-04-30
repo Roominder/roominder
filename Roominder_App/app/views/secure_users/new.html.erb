@@ -1,5 +1,13 @@
-<h1>New User</h1>
-
-<%= render 'form', secure_user: @secure_user %>
-
-<%= link_to 'Back', secure_users_path %>
+<div class="bgImage">
+    <header>
+        <h1 id="roomiTag">Roominder</h1>
+        <%= image_tag('roomi.png') %>
+    </header>
+<h1 id="newUser">New User</h1>
+<body>
+  <%= render 'form', secure_user: @secure_user %>
+</body>
+<footer> 
+        &copy Roominder 2020
+    </footer>
+</div>

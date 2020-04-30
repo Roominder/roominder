@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   get 'sign_up/join_room'
   post 'sign_up/new_room'
   post 'sign_up/assign_room'
-  get 'createtask/index'
-  get 'taskview/index'
   get 'join/index'
   get 'welcome/index'
 

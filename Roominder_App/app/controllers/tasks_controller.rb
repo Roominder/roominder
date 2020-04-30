@@ -14,7 +14,14 @@ class TasksController < ApplicationController
     
     def new
     end
-    
+   
+    def destroy
+        @task = Task.find(params[:id])
+        @task.destroy
+
+        redirect_to room_secure_user_tasks_url
+    end
+
     def create 
         #creates a new task with specified parameters (requirements defined in task_params)
         #capitalized Task refers to the class Task as defined in models
